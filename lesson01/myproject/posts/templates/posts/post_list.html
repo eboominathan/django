@@ -5,8 +5,20 @@
 {% endblock %}
 
 {% block content %}
+<section>
     <h1>Post List</h1>
-    <p>Checkout my <a href="/">Home</a> Page</p>
+        {% for post in posts %}
+            <article class="posts">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.date }}</p>
+                <p>{{ post.body }}</p>
+               
+            </article>
+        {% endfor %}
+</section>
+ 
+
+
 {% endblock %}
 
  
