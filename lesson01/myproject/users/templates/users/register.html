@@ -7,6 +7,12 @@ Register  a new user
 {% block content %}
 <section>
     <h1>Register a New User</h1>
+
+    <form class="form-with-validation" action="/users/register/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Submit</button>
+    </form>
   
 </section>
 {% endblock %}
